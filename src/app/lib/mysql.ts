@@ -9,7 +9,7 @@ const config = {
   database: "railway",
 };
 
-const connection = await mysql.createConnection(config);
+const connection = mysql.createPool(config);
 
 export class PapeleriaModel {
   //AÑADIR MARCA
