@@ -1,0 +1,100 @@
+.main {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  align-items: stretch;
+  height: 150px;
+  width: 50vw;
+  max-width: 800px;
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+ }
+
+.card2 {
+  width: 50%;
+  padding: 0.7em;
+  border: 1px solid var(--fondo);
+  border-radius: 0.5em;
+  transition: transform 0.2s;
+}
+
+.img {
+  width: 120px;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+
+.imgContainer {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--negro);
+  border-radius: 0.5em;
+  color: white;
+  padding: 1em;
+  gap: 0.5em;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.stock {
+  font-weight: bold;
+}
+.stock > span {
+  font-weight: normal;
+}
+
+.precio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: auto;
+}
+
+.iconGroup {
+  display: flex;
+  gap: 0.5em;
+}
+
+.iconButton {
+  background-color: var(--verde);
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 0.3em;
+  transition: background-color 0.2s;
+}
+.iconButton:hover {
+  background-color: #555;
+}
+.button{
+    display: flex;
+    width: 50%;
+    justify-content:center;
+}

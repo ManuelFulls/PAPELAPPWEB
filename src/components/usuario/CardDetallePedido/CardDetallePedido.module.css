@@ -1,0 +1,39 @@
+.section{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--negro);
+    padding: 1em;
+    border-radius: .5em;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.section:hover{
+     cursor: pointer;
+    transform: scale(1.02); /* aumenta un 2% el tamaño */
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.head > span{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.img{
+ 
+    width: 30%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.info > span{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.text{
+    font-weight: lighter;
+}

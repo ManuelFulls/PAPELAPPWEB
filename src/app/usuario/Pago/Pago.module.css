@@ -1,0 +1,47 @@
+.main {
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.entrega {
+  display: flex;
+  gap: 2em;
+}
+
+.seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 60px;
+  padding: 0.7em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+}
+
+.inputText {
+  padding: 0.7em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+}
+
+.btnPagar {
+  padding: 0.9em;
+  background-color: var(--verde);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnPagar:hover {
+  opacity: 0.85;
+}

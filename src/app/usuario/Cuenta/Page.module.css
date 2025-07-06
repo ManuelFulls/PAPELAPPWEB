@@ -1,0 +1,150 @@
+.main{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ .section{
+    width: 50%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    
+}
+.form{
+    width: auto;
+   background-color: var(--negro);
+   border-radius: .5em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    color: white;
+}
+.inputG{
+  border: none;
+  background-color: white;
+  padding: .5em;
+  background-color: var(--fondo);
+  width: 70%;
+  border-radius: .5em;
+  color: white;
+  font-size: 1em;
+}
+
+.buton{
+    width: 40%;
+    padding-top: .3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+    
+    gap: 1em;
+
+}
+.title{
+    font-size: 2em;
+    font-weight: bold;
+
+}
+.edit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.line{
+    cursor: pointer;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background-color: var(--negro);
+  color: white;
+  border-radius: 10px;
+  padding: 2em;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contentModal{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+   
+}
+.formModal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+
+}
+
+
+.closeModal{
+    cursor: pointer;
+
+}
+.headModal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headModal > span{
+    font-size: 1.4em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.passwordWrapper {
+width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.eyeToggle {
+  position: absolute;
+  right: .3em;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

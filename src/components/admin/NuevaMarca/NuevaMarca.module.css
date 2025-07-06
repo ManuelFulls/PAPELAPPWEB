@@ -1,0 +1,35 @@
+
+.form{
+    width: 30vw;
+    background-color: var(--negro);
+    padding: 2em;
+    border-radius: 1em;
+    display:flex;
+    flex-direction: column;
+
+
+    
+}
+.form > input{
+    border-style: none;
+    padding: .5em 1em .5em 1em;
+    border-radius: .5em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    
+}
+.form> label{
+    color: #fff;
+    margin-bottom: .2em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.close{
+   display: flex;
+   justify-content: end;
+   font-size: 1.4em;
+}
+
+.closet{
+    cursor: pointer;
+}

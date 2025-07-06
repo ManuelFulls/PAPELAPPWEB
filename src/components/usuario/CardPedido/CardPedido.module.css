@@ -1,0 +1,23 @@
+.section{
+    display: inline-flex;
+    width: auto;
+    flex-direction: column;
+    background-color: var(--negro);
+    margin: 1em;
+    padding: 1.3em;
+    border-radius: 1em;
+    color: white;
+    transition: transform 0.3s ease;
+
+}
+.section > span{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.info{
+    font-weight: lighter;
+}
+.section:hover{
+    cursor: pointer;
+    transform: scale(1.02); /* aumenta un 2% el tamaño */
+}

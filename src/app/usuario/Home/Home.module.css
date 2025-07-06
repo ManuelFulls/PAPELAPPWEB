@@ -1,0 +1,37 @@
+.main{
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.search{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+}
+.productos{
+    width: 100%;
+   
+    padding: 1em;
+    gap: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-items: center;
+}
+.categorias{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    gap: 3em;
+}
+.categorias > ol{
+    padding: .8em 1em .8em 1em;
+    border-radius: .5em;
+    background-color: var(--verde);
+    font-weight: bold;
+}

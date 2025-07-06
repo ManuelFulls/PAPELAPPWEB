@@ -1,0 +1,25 @@
+.article, .main{
+    display: flex;
+    flex-direction: column;
+}
+.title, .main{
+    padding: 1em;
+}
+.buscar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0em 1em 0 1em;
+}
+.main{
+    width: 100vw;
+     
+}
+.title{
+   font-size: 2em;
+   text-align: center;
+}
+.boxT{
+    display: flex;
+    justify-content: center;
+}
