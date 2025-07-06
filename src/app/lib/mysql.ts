@@ -2,14 +2,14 @@ import mysql from "mysql2/promise";
 import sharp from "sharp";
 
 const config = {
-  host: "ballast.proxy.rlwy.net",
-  user: "root",
-  port: 31229,
-  password: "GZsKlcFLXBjaSxCEkhdFjTlcdkQNrEKh",
-  database: "railway",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  port: Number(process.env.DB_PORT), // convertir a número
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 };
 
-const connection = mysql.createPool(config);
+const connection = await mysql.createConnection(config);
 
 export class PapeleriaModel {
   //AÑADIR MARCA
