@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import style from "./Home.module.css";
 import { useEffect, useState } from "react";
 import UseNavbar from "@/components/usuario/UseNavbar";
@@ -105,7 +106,7 @@ export default function Home() {
   }, [searchParams]);
 
   return (
-    <>
+    <Suspense fallback={null}>
       <UseNavbar />
       <article>
         <main className={style.main}>
@@ -130,6 +131,6 @@ export default function Home() {
           </section>
         </main>
       </article>
-    </>
+    </Suspense>
   );
 }
