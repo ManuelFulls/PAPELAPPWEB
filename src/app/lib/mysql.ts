@@ -2,11 +2,11 @@ import mysql from "mysql2/promise";
 import sharp from "sharp";
 
 const config = {
-  host: "localhost",
+  host: "ballast.proxy.rlwy.net",
   user: "root",
-  port: 3306,
-  password: "anuma",
-  database: "papeleria_app",
+  port: 31229,
+  password: "GZsKlcFLXBjaSxCEkhdFjTlcdkQNrEKh",
+  database: "railway",
 };
 
 const connection = await mysql.createConnection(config);
