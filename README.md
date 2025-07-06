@@ -1,10 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Aplicación Web para la Gestión de Ventas de una Papeleria
 
-First, run the development server:
-
-
 ## Proyecto para la universidad
 ## Panel Administrador
--- sd
+-- Gestión de los productos
+-- Visualización del estado de los pedidos realizados
+-- Visualización de ventas
+
+## Panel del Cliente
+-- Visualización de productos
+-- Carrito de compras
+-- Simulación de Pago con Tarjeta (Stripe)
+-- Visualización de Pedidos
+
