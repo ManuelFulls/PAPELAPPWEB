@@ -1,41 +1,16 @@
 "use client";
 
-import { Suspense } from "react";
 import style from "./Home.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 import UseNavbar from "@/components/usuario/UseNavbar";
 import toast from "react-hot-toast";
 import CardProducto from "@/components/usuario/CardProducto";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useElements } from "@stripe/react-stripe-js";
 import axios from "axios";
-import { useRef } from "react";
-export default function Home() {
-  const router = useRouter();
 
-  const [productos, setProductos] = useState<any[]>([]);
-  const [busqueda, setBusqueda] = useState("");
-
-  useEffect(() => {
-    const getData = async () => {
-      const res = await fetch("/api/data/admin/productos");
-      if (res.status === 200) {
-        const data = await res.json();
-        setProductos(data.data);
-        console.log(data.data);
-      } else {
-        toast.error("Algo salio mal");
-      }
-    };
-    getData();
-  }, []);
-
-  const productosFiltrados = productos.filter((producto) =>
-    producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
-  );
-
+function SearchSuccessHandler() {
   const searchParams = useSearchParams();
-  const hasRun = useRef(false); // 🔒 evita ejecución múltiple
+  const hasRun = useRef(false);
 
   useEffect(() => {
     const success = searchParams.get("success");
@@ -53,8 +28,6 @@ export default function Home() {
         try {
           const info = await axios.get("/api/cookie");
 
-          const usuario = JSON.parse(localStorage.getItem("usuario") || "{}");
-          // console.log(" DATOS USUARIO ", info);
           const res = await axios.post("/api/data/user/pedido", {
             id_usuario: info.data.data.id_usuario,
             tipoEntrega,
@@ -105,8 +78,38 @@ export default function Home() {
     }
   }, [searchParams]);
 
+  return null;
+}
+
+export default function Home() {
+  const router = useRouter();
+
+  const [productos, setProductos] = useState<any[]>([]);
+  const [busqueda, setBusqueda] = useState("");
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("/api/data/admin/productos");
+      if (res.status === 200) {
+        const data = await res.json();
+        setProductos(data.data);
+      } else {
+        toast.error("Algo salio mal");
+      }
+    };
+    getData();
+  }, []);
+
+  const productosFiltrados = productos.filter((producto) =>
+    producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
   return (
-    <Suspense fallback={null}>
+    <>
+      <Suspense fallback={null}>
+        <SearchSuccessHandler />
+      </Suspense>
+
       <UseNavbar />
       <article>
         <main className={style.main}>
@@ -131,6 +134,6 @@ export default function Home() {
           </section>
         </main>
       </article>
-    </Suspense>
+    </>
   );
 }
